@@ -12,13 +12,23 @@
   </div>
 </div>
 
-<%= form_for(@message) do |f| %>
-  名前:<br>
-  <%= f.text_area :name %>
-</br>
 
-  内容:<br>
-  <%= f.text_area :body %>
-</br>
-  <%= f.submit class: "btn btn-sm btn-primary" %>
+<%= form_for(@message) do |f| %>
+
+ <ul>
+   
+      <label><span>名前:</span>
+      <%= f.text_field :name %></label>
+
+    <p>    
+      <label><span>内容:</span>
+      <%= f.text_area :body %></label>
+    </p>
+
+    <p>
+        <span><%= f.submit class: "btn btn-sm btn-primary" %></span>
+    </p>
+    
+  </ul>
+
 <% end %>
