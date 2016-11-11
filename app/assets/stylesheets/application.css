@@ -16,5 +16,7 @@
 
 textarea {
     width: 174px;
-
+    resize: vertical;
+    vertical-align: top;
 }
+    
