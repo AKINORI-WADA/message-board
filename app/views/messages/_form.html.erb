@@ -2,45 +2,44 @@
 
   <% if @message.errors.present? %>
     <div class="alert alert-danger">
-      <%= alert %>
-      <ul>
-        <% @message.errors.full_messages.each do |full_message| %>
-          <li>
-            <%= full_message %>
-          </li>
-        <% end %> 
-      </ul>
-    </div>
+        <%= alert %>
+        <ul>
+          <% @message.errors.full_messages.each do |full_message| %>
+            <li>
+              <%= full_message %>
+            </li>
+          <% end %> 
+        </ul>
+      </div>
   <% end %>
-
+  
   <div class="form-group">
-   <%= f.label :name, "名前", class:"col-md-2 control-label" %>
-    <div class="col-md-4">
-        <%= f.text_field :name, class: "form-control" %>
-        <p class="help-block">※20文字以内で入力して下さい</p>
+    <label for="name" class="control-label col-md-2">名前</label>
+    <div class="col-md-10">
+      <%= f.text_field :name, class: "form-control" %>
+      <p class="help-block">※20文字以内で入力して下さい</p>
     </div>
   </div>
-
+  
   <div class="form-group">
-   <%= f.label :age, "年齢", class:"col-md-2 control-label" %>
-    <div class="col-md-4">
+    <label for="age" class="control-label col-md-2">年齢</label>
+    <div class="col-md-10">
       <%= f.text_field :age, class: "form-control" %>
       <p class="help-block">※0歳以上の数字を入力して下さい</p>
     </div>
   </div>
- 
+
   <div class="form-group">
-    <%= f.label :body, "内容", class:"col-md-2 control-label" %>
-    <div class="col-md-4">
+    <label for="body" class="control-label col-md-2">内容</label>
+    <div class="col-md-10">
       <%= f.text_area :body, class: "form-control" %>
       <p class="help-block">※2文字以上、30字以内で入力して下さい</p>
     </div>
   </div>
-
+  
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <%= f.submit class: "btn btn-sm btn-primary" %>
     </div>
   </div>
-
 <% end %>

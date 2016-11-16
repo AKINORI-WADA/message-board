@@ -14,7 +14,7 @@
  *= require_self
  */
 
-textarea {
-    resize: vertical
-}
+textarea {  
+    resize: vertical; 
+}  
     
